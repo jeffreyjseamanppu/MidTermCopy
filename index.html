@@ -1,0 +1,78 @@
+<html>
+<head>
+   <title>MidTerm</title>
+   <center>
+   <script type="text/javascript">
+
+     //Global Variables
+     var d = new Date();
+     var RandomNumber;
+     var RoundedNumber;
+     var myhours;
+     var TimeOfDay;
+     var name;
+     var FavCity = "PITTSBURGH";
+     var NewFavCity;
+     var newsArticle;
+     var wordSearch = "smart home products";
+
+
+     //Start with your Name
+     name = prompt("Input your name");
+
+     //This is for the current date
+     d = new Date();
+     //This will get the hours
+     myhours = (new Date()).getHours();
+
+
+     //Random Number
+     RandomNumber = Math.random();
+     RoundedNumber = Math.round(RandomNumber * 100) + 1;
+
+     //Function to get the Time of Day
+     var TimeOfDay = myFunction(myhours);
+
+
+     function myFunction(myhours) {
+       if(myhours <12){
+         return "Good Morning"
+       } else {
+         return "Good Evening"
+       }
+     }
+
+     //Convert to LowerCase
+     NewFavCity = FavCity.toLowerCase();
+
+     //Locate the line that this article is option
+     newsArticle = "Neither Apple nor Google have been as aggressive in acquiring smart home products. And when a company like Amazon has dibs on more products in your house, that means rival ones can't be easily used. Once you're all in on Alexa, is there room for a Google Home Hub video speaker, which operates on the Google Assistant? Because you can't use both interchangeably. A perfect example is Sonos One, the connected speaker that currently takes Alexa commands. Later this year, Sonos will update the product to accept Google commands as well – but not at the same time. The user will have to assign one or the other as the personal assistant of their choice. Amazon famously missed out on smartphones by trying to get into the market too late after Apple and Google. It since built a giant device business with e-readers, tablets, connected speakers, security cameras and now, smart home products."
+
+     varfirstChar = newsArticle.indexOf(wordSearch);
+
+     //Output
+     document.write(TimeOfDay + " " + name);
+     document.write("<br>");
+      document.write("<br>");
+     document.write("Today's date is " + d);
+     document.write("<br>");
+     document.write("<br>");
+     document.write("Your random number today is " + RoundedNumber);
+     document.write("<br>");
+     document.write("Your new favorite city is " + NewFavCity);
+     document.write("<br>");
+     document.write("<br>");
+     document.write("The word search for " + wordSearch + " is on line #" + varfirstChar);
+
+
+
+
+
+   </script>
+
+   <p><font color="blue"><b><h1>That's your Mid-Term exam</h1></b></font color></p>
+   </center>
+
+
+</head>
+</html>
